@@ -14,6 +14,7 @@ var removeVowels = function(S) {
 1. array to string
 2. || or &&
 3. push
+4. join(), array to string again!
 
 <2>
 var removeVowels = function(S) {
@@ -27,6 +28,17 @@ var removeVowels = function(S) {
     return n.join('');
 };
 
-1. array.indexOf(), from ie9
+5. array.indexOf(), from ie9
 https://www.w3schools.com/jsref/jsref_indexof_array.asp
 
+<3>
+var removeVowels = function(S) {
+    let checker = ['a', 'e', 'i', 'o', 'u']
+    let n = S.split('').filter(c => {
+        return checker.indexOf(c) === -1; 
+    })
+    return n.join('');
+};
+
+6. S.split(''), without the '', only one item in the result array.
+6. filter, only put the condition in return section.
