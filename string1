@@ -54,3 +54,8 @@ var removeVowels = function(S) {
     }
     return result;
 };
+
+7. ie does not suppor for... of ...
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
+8. String.prototype.includes(), ie does not support
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes
