@@ -42,3 +42,15 @@ var removeVowels = function(S) {
 
 6. S.split(''), without the '', only one item in the result array.
 6. filter, only put the condition in return section.
+
+<4>
+var removeVowels = function(S) {
+    let result = "";
+    const toExclude = "aeiou";
+    for(const char of S){
+        if(!toExclude.includes(char)){
+            result += char
+        }
+    }
+    return result;
+};
