@@ -1,5 +1,6 @@
 https://leetcode.com/problems/remove-vowels-from-a-string/
 
+<1>
 var removeVowels = function(S) {
     let n = [];
     for(var i=0; i < S.length; i++) {
@@ -13,3 +14,19 @@ var removeVowels = function(S) {
 1. array to string
 2. || or &&
 3. push
+
+<2>
+var removeVowels = function(S) {
+    let n = [];
+    let checker = ['a', 'e', 'i', 'o', 'u']
+    for(var i=0; i < S.length; i++) {
+        if (checker.indexOf(S[i]) === -1) {
+            n.push(S[i]);
+        }
+    }
+    return n.join('');
+};
+
+1. array.indexOf(), from ie9
+https://www.w3schools.com/jsref/jsref_indexof_array.asp
+
