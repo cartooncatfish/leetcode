@@ -13,3 +13,27 @@ var findNumbers = function(nums) {
 };
 
 1. nums.toString() ~ parseInt(s)
+
+var findNumbers = function(nums) {
+    let count = 0
+    for(var i=0; i< nums.length; i++) {
+        console.log(nums[i],Math.log10(nums[i]), Math.ceil(Math.log10(nums[i])));
+        if ((Math.ceil(Math.log10(nums[i])) % 2) === 0) {
+            count ++
+        }
+    }
+    
+    return count
+};
+
+2. Math.log10()
+3. ceil or floor
+
+findNumbers([12,345,2,6,7896]);
+
+12 1.0791812460476249 2
+345 2.537819095073274 3
+2 0.3010299956639812 1
+6 0.7781512503836436 1
+7896 3.8974071396615804 4
+
