@@ -1,0 +1,16 @@
+https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/
+
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var subtractProductAndSum = function(n) {
+    let s = n.toString()
+    let d = s.split(''); console.log(d);
+    let pro = d.reduce((accum, v) => accum * parseInt(v), 1)
+    let add = d.reduce((accum, v) => accum + parseInt(v), 0); console.log(pro, add);
+    return pro - add
+};
+
+1. v +1 -- <string> + 0, can not convert to int, but <int> + "" can converte to string
+2. parseInt() ~~~ toString()
