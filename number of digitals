@@ -37,3 +37,8 @@ findNumbers([12,345,2,6,7896]);
 6 0.7781512503836436 1
 7896 3.8974071396615804 4
 
+<3>
+var findNumbers = function(nums) {
+    return nums.filter(x => Math.floor(Math.log10(x)) % 2).length;
+};
+
