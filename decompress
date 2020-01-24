@@ -1,0 +1,46 @@
+https://leetcode.com/problems/decompress-run-length-encoded-list/
+
+<1>
+var decompressRLElist = function(nums) {
+    let p = 0;
+    let pair = [];
+    let end = Math.floor(nums.length/2)
+    for (p=0; p < end; p++) {
+        pair.push({freq: nums[2*p], val: nums[2*p + 1]})
+        // pair.push({freq: 1, val: 2})
+    }
+    let r=[]
+    for(i=0; i < pair.length; i++ ) {
+        let aPair = pair[i]
+        let con = [];
+        for(j=0; j<aPair.freq; j++) {
+            con.push(aPair.val)
+        }
+        r = r.concat(con)
+    }
+    return r
+};
+
+1. the condition in loop, < or <= 
+
+<2>
+var decompressRLElist = function(nums) {
+    let p = 0;
+    let pair = [];
+    let end = Math.floor(nums.length/2)
+    for (p=0; p < end; p++) {
+        pair.push({freq: nums[2*p], val: nums[2*p + 1]})
+    }
+    let r=[]
+    for(i=0; i < pair.length; i++ ) {
+        let aPair = pair[i]
+        // let con = [];
+        for(j=0; j<aPair.freq; j++) {
+            r.push(aPair.val)
+        }
+        // r = r.concat(con)
+    }
+    return r
+};
+
+2. remove one extra array!
